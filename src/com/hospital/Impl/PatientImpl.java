@@ -38,8 +38,8 @@ public class PatientImpl implements PatientInterface {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		p.setAffiliationNumber(nom + cmp);
-		cmp++;
+		System.out.println("saisir AffiliationNumber de patient :");
+		p.setAffiliationNumber(sc.next());
 		System.out.println("Choisir votre type d'assurance :");
 		System.out.println("------------------------------------------------------------");
 		System.out.println("1 =====> CNSS");
@@ -47,10 +47,19 @@ public class PatientImpl implements PatientInterface {
 		System.out.println("3 =====> CNOPS");
 		System.out.println("4 =====> NONE");
 		System.out.println("------------------------------------------------------------");
-
 		int choix = sc.nextInt();
 		InsuranceType insuranceTypev = insuranceType(choix);
         p.setInsuranceType(insuranceTypev);
+		System.out.println("------------------------------------------------------");
+		System.out.println("Le prenom de patient : " + p.getFirstname());
+		System.out.println("Le nom de patient : " + p.getLastname());
+		System.out.println("L'adresse de patient : " + p.getAddress());
+		System.out.println("Le phone de patient : " + p.getPhone());
+		System.out.println("La date d'entrer à l'hopitale de patient : " + p.getHospitalEntryDate());
+		System.out.println("Le AffiliationNumber de patient : " + p.getAffiliationNumber());
+		System.out.println("Le Type d'assurance de patient : " + p.getInsuranceType());
+		System.out.println("------------------------------------------------------");
+
 		
 		return p;
 	}
@@ -79,9 +88,9 @@ public class PatientImpl implements PatientInterface {
 		List<Patient> liste = new ArrayList<Patient>();
 		do {
 			liste.add(saisie());
+			affichageListe(liste);
 			System.out.println("Continuer ? o/n ");
 			rep = sc.next();
-			affichageListe(liste);
 		}while(rep.equalsIgnoreCase("o"));
 		
 		return liste;

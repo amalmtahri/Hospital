@@ -6,7 +6,7 @@ import com.hospital.models.Doctor;
 
 public interface DoctorInterface {
 	public Doctor saisie();
-	public void affichage(Doctor d);
-	public List<Doctor> saisiListe();
-	public void affichageListe(List<Doctor> Doctors);
+	//public void affichage(Doctor d);
+	//public List<Doctor> saisiListe();
+	//public void affichageListe(List<Doctor> Doctors);
 }

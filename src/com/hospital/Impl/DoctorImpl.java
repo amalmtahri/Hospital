@@ -21,23 +21,32 @@ public class DoctorImpl implements DoctorInterface{
 		d.setLastname(nom);
 		System.out.println("saisir l'adresse de doctor: ");
 		d.setAddress(sc.next());
-		System.out.println("saisir le numero phone de doctor: ");
+		System.out.println("saisir le phone de doctor: ");
 		d.setPhone(sc.next());
 		System.out.println("saisir le numero professionnelle de doctor: ");
 		d.setProfessionNumber(sc.next());
 		System.out.println("saisir le salaire de doctor: ");
 		d.setSalary(Double.parseDouble(sc.next()));
+		System.out.println("------------------------------------------------------");
+		System.out.println("Le prenom de doctor : " + d.getFirstname());
+		System.out.println("Le nom de doctor : " + d.getLastname());
+		System.out.println("L'adresse de doctor : " + d.getAddress());
+		System.out.println("Le phone de doctor : " + d.getPhone());
+		System.out.println("Le numero professionnelle de doctor : " + d.getProfessionNumber());
+		System.out.println("Le le salaire de doctor : " + d.getSalary());
+		System.out.println("------------------------------------------------------");
+
 		return d;
 	}
 
-	@Override
+	/*@Override
 	public void affichage(Doctor d) {
 		// TODO Auto-generated method stub
 		System.out.println(d);
 		
-	}
+	}*/
 
-	@Override
+	/*@Override
 	public List<Doctor> saisiListe() {
 		// TODO Auto-generated method stub
 		String rep = null;
@@ -59,6 +68,6 @@ public class DoctorImpl implements DoctorInterface{
 			affichage(d);
 		}
 		
-	}
+	}*/
 
 }

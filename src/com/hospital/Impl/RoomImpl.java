@@ -17,36 +17,41 @@ public class RoomImpl implements RoomInterface{
 		r.setNumber(sc.nextInt());
 		System.out.println("Enter le stage de room : ");
 		r.setStage(sc.nextInt());
+		System.out.println("------------------------------------------------------");
+		System.out.println("Le nombre de Room :" + r.getNumber());
+		System.out.println("Le stage de Room :" + r.getStage());
+		System.out.println("------------------------------------------------------");
 		return r;
 	}
 
-	@Override
+	/*@Override
 	public void affichage(Room r) {
 		// TODO Auto-generated method stub
 		System.out.println(r);
 		
-	}
+	}*/
 
-	@Override
+	/*@Override
 	public List<Room> saisieList() {
 		// TODO Auto-generated method stub
 		String rep = null;
 		List<Room> liste = new ArrayList<Room>();
 		do {
 			liste.add(saisie());
-			affichageListe(liste);
+			//affichageListe(liste);
 			System.out.println("Continuer ? o/n ");
 			rep = sc.next();
 			
-		}while(rep.equalsIgnoreCase(rep));
+		}while(rep.equalsIgnoreCase("o"));
+		System.out.println("ok");
 		return liste;
-	}
+	}*/
 
-	@Override
+	/*@Override
 	public void affichageListe(List<Room> rooms) {
 		// TODO Auto-generated method stub
 		for (Room r : rooms) {
 			affichage(r);
 		}
-	}
+	}*/
 }

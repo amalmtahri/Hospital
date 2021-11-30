@@ -6,7 +6,7 @@ import com.hospital.models.Room;
 
 public interface RoomInterface {
 	public Room saisie();
-	public void affichage(Room r);
-	public List<Room> saisieList();
-	public void affichageListe(List<Room> rooms);
+	//public void affichage(Room r);
+	//public List<Room> saisieList();
+	//public void affichageListe(List<Room> rooms);
 }
