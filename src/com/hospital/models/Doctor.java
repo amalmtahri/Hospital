@@ -1,18 +1,38 @@
 package com.hospital.models;
 
+import java.util.List;
+
 public class Doctor extends Person{
 
 	private String professionNumber;
 	private TimeSlot shiftSlot;
 	private double salary;
+	private List<Nurse> nusreD;
 	
-	public Doctor(String professionNumber,TimeSlot shiftSlot,double salary) {
-		super();
-		this.professionNumber = professionNumber;
-		this.shiftSlot = shiftSlot;
-		this.salary = salary;
+	public Doctor(String firstname,String lastname,String phone,String address,String professionNumber,TimeSlot shiftSlot,double salary,List<Nurse> nurseD) {
+		super(firstname,lastname,phone,address);
+		this.setProfessionNumber(professionNumber);
+		this.setShiftSlot(shiftSlot);
+		this.setSalary(salary);
+		this.setNusreD(nurseD);
 	}
 	
+
+
+
+	public List<Nurse> getNusreD() {
+		return nusreD;
+	}
+
+
+
+
+	public void setNusreD(List<Nurse> nusreD) {
+		this.nusreD = nusreD;
+	}
+
+
+
 
 	public Doctor() {
 		// TODO Auto-generated constructor stub
@@ -45,7 +65,7 @@ public class Doctor extends Person{
 
 	@Override
 	public String toString() {
-		return "Doctor [firstname="+getFirstname()+",lastName="+getLastname()+",phone="+getPhone()+",address="+getAddress()+",professionNumber=" + professionNumber + ", shiftSlot=" + shiftSlot + ", salary=" + salary + "]";
+		return "Doctor [firstname="+getFirstname()+",lastName="+getLastname()+",phone="+getPhone()+",address="+getAddress()+",professionNumber=" + professionNumber + ", shiftSlot=" + shiftSlot + ", salary=" + salary + ",nusreD="+nusreD+"]";
 	}
 	
 }

@@ -2,7 +2,6 @@ package com.hospital.models;
 
 public class Nurse extends Person{
 	private String professionNumber;
-	private TimeSlot shiftSlot;
 	private double salary;
 	
 	
@@ -12,12 +11,7 @@ public class Nurse extends Person{
 	public void setProfessionNumber(String professionNumber) {
 		this.professionNumber = professionNumber;
 	}
-	public TimeSlot getShiftSlot() {
-		return shiftSlot;
-	}
-	public void setShiftSlot(TimeSlot shiftSlot) {
-		this.shiftSlot = shiftSlot;
-	}
+
 	public double getSalary() {
 		return salary;
 	}
@@ -26,7 +20,17 @@ public class Nurse extends Person{
 	}
 	@Override
 	public String toString() {
-		return "Nurse [firstname="+getFirstname()+",lastName="+getLastname()+",phone="+getPhone()+",address="+getAddress()+",professionNumber=" + professionNumber + ", shiftSlot=" + shiftSlot + ", salary=" + salary + "]";
+		return "Nurse [firstname="+getFirstname()+",lastName="+getLastname()+",phone="+getPhone()+",address="+getAddress()+",professionNumber=" + professionNumber + ",salary=" + salary + "]";
+	}
+	public Nurse() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Nurse(String firstname, String lastname, String phone, String address, String professionNumber,double salary) {
+		super(firstname, lastname, phone, address);
+		this.setProfessionNumber(professionNumber);
+        this.setSalary(salary);
+		// TODO Auto-generated constructor stub
 	}
 	
 }

@@ -10,4 +10,6 @@ public interface OperationInterface {
 	public Optional<Operation> getOperationByRef(int ref);
 	
 	public void affichage(List<Operation> operations);
+
+	void addOperation(List<Operation> operations);
 }
